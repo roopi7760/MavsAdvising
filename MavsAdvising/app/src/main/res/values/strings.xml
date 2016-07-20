@@ -4,7 +4,16 @@
     <string name="emptyString" />
 
     <string name="studentreason_prompt">Choose a REASON</string>
-
+    
+    
+    <!--Advisor Layout String -->
+    <string name="create_advisor_schedule">Create Advisor Schedule</string>
+    <string name="add_advisor_schedule">Add Advisor Schedule</string>
+    <string name="view_del_advisor_schedule">View/Del Advisor Schedule</string>
+    <string name="manage_advising_schedule">Manage Advising Schedule</string>
+    <string name="view_active_appointments">View Active Appointments</string>
+    <string name="view_student_progress">View Student Progress</string>
+<!-- End of Advisor Layout Strings -->
     <string-array name="studentreason_arrays">
         <item>OPT/CPT</item>
         <item>PRE-REQUISITE WAIVER</item>

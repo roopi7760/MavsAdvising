@@ -4,18 +4,63 @@
     android:orientation="vertical"
     android:weightSum="1">
 
-    <TextView
-        android:layout_width="396dp"
-        android:layout_height="47dp"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Advisor Dashboard"
-        android:id="@+id/advisor_dashboard" />
-
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1">
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textAppearance="?android:attr/textAppearanceLarge"
+          android:text="Advisor Dashboard"
+          android:id="@+id/advisor_dashboard_txt_view" />
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Date here"
+          android:textAppearance="?android:attr/textAppearanceLarge"
+          android:layout_marginLeft="100dp"
+          android:id="@+id/advisor_date_txt_view"
+          />
+  </LinearLayout>
     <TextView
         android:layout_width="179dp"
         android:layout_height="wrap_content"
-        android:id="@+id/advisor_welcome_msg"
+        android:id="@+id/advisor_welcome_msg_text_view"
         android:layout_gravity="center_horizontal"
         android:layout_weight="0.12" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/create_advisor_schedule"
+        android:id="@+id/create_advisor_schedule_btn"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/add_advisor_schedule"
+        android:id="@+id/add_advisor_schedule_btn"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/view_del_advisor_schedule"
+        android:id="@+id/view_del_advisor_schedule_btn" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/manage_advising_schedule"
+        android:id="@+id/manage_advising_schedule_btn"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/view_active_appointments"
+        android:id="@+id/view_active_appointments_btn"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/view_student_progress"
+        android:id="@+id/view_student_progress_btn"/>
+
+
 
 </LinearLayout>

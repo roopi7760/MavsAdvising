@@ -24,11 +24,17 @@ public class LoginActivity extends AppCompatActivity {
                 a.setText("Welcome " + usernetid);
             }
         } else if (role.equals("advisor")) {
+            /* Commented by Roopesh : Calling the intent to display Advisor dashboard activity
             setContentView(R.layout.advisor_dashboard);
+
             TextView a = (TextView) findViewById(R.id.advisor_welcome_msg);
             if (a != null) {
                 a.setText("Welcome " + usernetid);
-            }
+            }*/
+            Intent i = new Intent(LoginActivity.this, AdvisorDashBoardActivity.class);
+            i.putExtra("AdvisorNetId" , usernetid);
+            i.putExtra("role", role);
+            startActivity(i);
         }
         if (role.equals("student")) {
             setContentView(R.layout.student_dashboard);
