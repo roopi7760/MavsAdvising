@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">MavsAdvising</string>
+    <string name="action_settings">Settings</string>
+    <string name="emptyString" />
+
+    <string name="studentreason_prompt">Choose a REASON</string>
+
+    <string-array name="studentreason_arrays">
+        <item>OPT/CPT</item>
+        <item>PRE-REQUISITE WAIVER</item>
+        <item>COURSE ENROLLMENT</item>
+        <item>GENERAL ADVISING</item>
+        <item>OTHERS</item>
+    </string-array>
+</resources>
