@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
     public void onButtonClick(View v) {
         if (v.getId() == R.id.Blogin) {
             EditText netid = (EditText) findViewById(R.id.TFnetid);
-            String inputnetid = netid.getText().toString();
+            String inputnetid = netid.getText().toString().toLowerCase();
 
             EditText pass = (EditText) findViewById(R.id.TFpassword);
             String inputpassword = pass.getText().toString();
@@ -38,11 +38,26 @@ public class MainActivity extends AppCompatActivity {
 
             if (!role.equals("error")) {
                 System.out.println("input net id is " + inputnetid);
-                Intent i = new Intent(MainActivity.this, LoginActivity.class);
-                i.putExtra("Usernetid", inputnetid);
-                i.putExtra("role", role);
+                if (role.equals("advisor")) {
+            /* Commented by Roopesh : Calling the intent to display Advisor dashboard activity
+            setContentView(R.layout.advisor_dashboard);
 
-                startActivity(i);
+            TextView a = (TextView) findViewById(R.id.advisor_welcome_msg);
+            if (a != null) {
+                a.setText("Welcome " + usernetid);
+            }*/
+                    Intent i = new Intent(MainActivity.this, AdvisorDashBoardActivity.class);
+                    i.putExtra("AdvisorNetId" , inputnetid);
+                    i.putExtra("role", role);
+                    startActivityForResult(i, 0);
+                }
+                else {
+                    Intent i = new Intent(MainActivity.this, LoginActivity.class);
+                    i.putExtra("Usernetid", inputnetid);
+                    i.putExtra("role", role);
+
+                    startActivityForResult(i, 0);
+                }
             } else {
                 Toast failedmessage = Toast.makeText(MainActivity.this, "Invalid details.. Please try again..", Toast.LENGTH_LONG);
                 failedmessage.show();
@@ -53,6 +68,11 @@ public class MainActivity extends AppCompatActivity {
 
 
         }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
     }
 
     @Override

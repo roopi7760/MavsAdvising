@@ -23,19 +23,19 @@ public class LoginActivity extends AppCompatActivity {
             if (a != null) {
                 a.setText("Welcome " + usernetid);
             }
-        } else if (role.equals("advisor")) {
+        } /*else if (role.equals("advisor")) {
             /* Commented by Roopesh : Calling the intent to display Advisor dashboard activity
             setContentView(R.layout.advisor_dashboard);
 
             TextView a = (TextView) findViewById(R.id.advisor_welcome_msg);
             if (a != null) {
                 a.setText("Welcome " + usernetid);
-            }*/
+            }
             Intent i = new Intent(LoginActivity.this, AdvisorDashBoardActivity.class);
             i.putExtra("AdvisorNetId" , usernetid);
             i.putExtra("role", role);
-            startActivity(i);
-        }
+            startActivityForResult(i, 0);
+        }*/
         if (role.equals("student")) {
             setContentView(R.layout.student_dashboard);
             TextView a = (TextView) findViewById(R.id.student_welcome_msg);
@@ -43,6 +43,12 @@ public class LoginActivity extends AppCompatActivity {
                 a.setText("Welcome " + usernetid);
             }
         }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
     }
 
         public void onButtonClick(View v) {

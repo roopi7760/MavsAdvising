@@ -34,11 +34,7 @@
         android:layout_height="wrap_content"
         android:text="@string/create_advisor_schedule"
         android:id="@+id/create_advisor_schedule_btn"/>
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/add_advisor_schedule"
-        android:id="@+id/add_advisor_schedule_btn"/>
+
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -55,12 +51,11 @@
         android:layout_height="wrap_content"
         android:text="@string/view_active_appointments"
         android:id="@+id/view_active_appointments_btn"/>
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/view_student_progress"
-        android:id="@+id/view_student_progress_btn"/>
-
+<Button
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="@string/logout_advisor"
+    android:id="@+id/logout_advisor_btn"/>
 
 
 </LinearLayout>
