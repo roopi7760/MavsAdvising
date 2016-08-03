@@ -26,6 +26,7 @@
             android:name=".StudentViewCancelActivity"
             android:screenOrientation="portrait" />
         <activity android:name=".AdvisorDashBoardActivity" />
+        <activity android:name=".createadvisors" />
         <activity android:name=".viewDelAdvisor"></activity>
     </application>
 

@@ -1,5 +1,6 @@
 package com.uta.login.mavsadvising;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -30,6 +31,21 @@ public class AdvisorDashBoardActivity extends AppCompatActivity {
          String role = i.getStringExtra("role").toString();
         TextView welcome_Advisor_TxtView = (TextView) findViewById(R.id.advisor_welcome_msg_text_view);
         welcome_Advisor_TxtView.setText(welcome_Advisor_str);
+
+
+        //final Context context = this;
+        Button create_advisor = (Button) findViewById(R.id.create_advisor_schedule_btn);
+
+        create_advisor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(),createadvisors.class);
+                i.putExtra("AdvisorNetId",NetID);
+               startActivity(i);
+
+
+            }
+        });
 
         Button logout_Advisor = (Button) findViewById(R.id.logout_advisor_btn);
         logout_Advisor.setOnClickListener(new View.OnClickListener(){
